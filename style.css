@@ -182,3 +182,63 @@ body{
     color: #fffcfc;
     background-color: #d7221c;
 }
+
+/*footer*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo{
+    margin-bottom: 0px;
+    margin-left: 25px;
+}
+
+footer h4{
+    font-size: 16px;
+    padding: 20px;
+}
+
+footer p{
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+footer .follow{
+    margin-top: 10px;
+}
+
+footer i{
+    padding: 5px;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: #f42121;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    background: #fff; 
+    z-index: 1000;
+    padding: 10px;
+    margin-top: 20px;
+}
