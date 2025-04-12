@@ -103,7 +103,7 @@ body{
 }
 
 /*Home Page*/
-#hero{
+/* #hero{
     background-image: url('images/mn-dairy1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -113,12 +113,43 @@ body{
     width: 100%;
     background-position: center center;
     /*background-position: top 25% right 0;*/
+    /* padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+} */ 
+#hero {
+    position: relative; /* Ensures child elements are positioned within */
+    background-image: url('images/mn-dairy1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    width: 100%;
     padding: 0 50px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency */
+    z-index: 1; /* Ensures the overlay is placed correctly */
+}
+
+#hero * {
+    position: relative;
+    z-index: 2; /* Ensures the text and content appear above the overlay */
+}
+
 
 #hero h1{
     color:rgb(244, 240, 240);
@@ -360,4 +391,89 @@ footer .copyright{
 
 #prodetails .single-pro-details span{
     line-height: 25px;
+}
+
+/* Contact Page */
+#contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact-details .details{
+    width: 40%;
+}
+
+#contact-details .details span,
+#form-details form span{
+    font-size: 12px;
+}
+
+#contact-details .details h2,
+#form-details form h2{
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#contact-details .details h3{
+    font-size: 26px;
+    padding-bottom: 15px;
+}
+
+#contact-details .details li{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+#contact-details .details li i{
+    font-size: 14px;
+    padding-right: 22px;
+}
+
+#contact-details .details li p{
+    margin: 0;
+    font-size: 14px;
+}
+
+#contact-details .map{
+    width: 55%;
+    height: 400px;
+}
+
+#contact-details .map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#form-details{
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form button{
+    border: 0px solid #000; 
+    padding: 18px 20px; 
+    background-color: #ff0000;
+    color: #fbf9f9; 
+    font-weight: bold;
+    cursor: pointer; 
 }
